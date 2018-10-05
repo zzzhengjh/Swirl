@@ -21,6 +21,7 @@ Now, store the result of x - 3 in a new variable called y.
 y <- x - 3
 ```
 Now, let's create a small collection of numbers called a vector. Any object that contains data is called a data structure and numeric vectors are the simplest type of data structure in R. In fact, even a single number is considered a vector of length one.
+
 The easiest way to create a vector is with the c() function, which stands for 'concatenate' or 'combine'. To create a vector containing the numbers 1.1, 9, and 3.14, type c(1.1, 9, 3.14). Try it now and store the result in a variable called z.
 ```
 z <- c(1.1, 9, 3.14)
@@ -43,13 +44,17 @@ Now, create a new variable called my_div that gets the value of z divided by my_
 my_div <- z / my_sqrt
 ```
 When given two vectors of the same length, R simply performs the specified arithmetic operation (`+`, `-`, `*`, etc.) element-by-element. If the vectors are of different lengths, R 'recycles' the shorter vector until it is the same length as the longer vector.
+
 When we did z * 2 + 100 in our earlier example, z was a vector of length 3, but technically 2 and 100 are each vectors of length 1.
+
 Behind the scenes, R is 'recycling' the 2 to make a vector of 2s and the 100 to make a vector of 100s. In other words, when you ask R to compute z * 2 + 100, what it really computes is this: z * c(2, 2, 2) + c(100, 100, 100).
+
 To see another example of how this vector 'recycling' works, try adding c(1, 2, 3, 4) and c(0, 10). Don't worry about saving the result in a new variable.
 ```
 c(1, 2, 3, 4) + c(0, 10)
 ```
 If the length of the shorter vector does not divide evenly into the length of the longer vector, R will still apply the 'recycling' method, but will throw a warning to let you know something fishy might be going on.
+
 Try c(1, 2, 3, 4) + c(0, 10, 100) for an example.
 ```
 c(1, 2, 3, 4) + c(0, 10, 100)
