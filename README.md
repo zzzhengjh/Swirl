@@ -5,7 +5,9 @@ R can be used as an interactive calculator. Type 5 + 7 and press Enter.
 5 + 7
 ```
 R simply prints the result of 12 by default. However, R is a programming language and often the reason we use a programming language as opposed to a calculator is to automate some process or avoid unnecessary repetition.
+
 In this case, we may want to use our result from above in a second calculation. Instead of retyping 5 + 7 every time we need it, we can just create a new variable that stores the result.
+
 To assign the result of 5 + 7 to a new variable called x, you type x <- 5 + 7. This can be read as 'x gets 5 plus 7'. Give it a try now.
 ```
 x <- 5 + 7
