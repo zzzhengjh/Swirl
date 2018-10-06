@@ -201,39 +201,39 @@ Pull up the documentation for ':' now.
 Often, we'll desire more control over a sequence we're creating than what the `:` operator gives us. The seq() function serves this purpose.
 
 The most basic use of seq() does exactly the same thing as the `:` operator. Try seq(1, 20) to see this.
-`
+```
 seq(1, 20)
-`
+```
 This gives us the same output as 1:20. However, let's say that instead we want a vector of numbers ranging from 0 to 10, incremented by 0.5. seq(0, 10, by=0.5) does just that. Try it out.
-`
+```
 seq(0, 10, by = 0.5)
-`
+```
 Or maybe we don't care what the increment is and we just want a sequence of 30 numbers between 5 and 10. seq(5, 10, length=30) does the trick. Give it a shot now and store the result in a new variable called my_seq.
-`
+```
 my_seq <- seq(5, 10, length = 30)
-`
+```
 To confirm that my_seq has length 30, we can use the length() function. Try it now.
-`
+```
 length(my_seq)
-`
+```
 Let's pretend we don't know the length of my_seq, but we want to generate a sequence of integers from 1 to N, where N represents the length of the my_seq vector. In other words, we want a new vector (1, 2, 3, ...) that is the same length as my_seq.
 
 There are several ways we could do this. One possibility is to combine the `:` operator and the length() function like this: 1:length(my_seq). Give that a try.
-`
+```
 1:length(my_seq)
-`
+```
 Another option is to use seq(along.with = my_seq). Give that a try.
-`
+```
 seq(along.with = my_seq)
-`
+```
 However, as is the case with many common tasks, R has a separate built-in function for this purpose called seq_along(). Type seq_along(my_seq) to see it in action.
-`
+```
 > seq(along.with = my_seq)
-`
+```
 However, as is the case with many common tasks, R has a separate built-in function for this purpose called seq_along(). Type seq_along(my_seq) to see it in action.
-`
+```
 seq_along(my_seq)
-`
+```
 There are often several approaches to solving the same problem, particularly in R. Simple approaches that involve less typing are generally best. It's also important for your code to be readable, so that you and others can figure out what's going on without too much hassle.
 
 If R has a built-in function for a particular task, it's likely that function is highly optimized for that purpose and is your best option. As you become a more advanced R programmer, you'll design your own functions to perform tasks when there are no better options. We'll explore writing your own functions in future lessons.
@@ -241,14 +241,14 @@ If R has a built-in function for a particular task, it's likely that function is
 One more function related to creating sequences of numbers is rep(), which stands for 'replicate'. Let's look at a few uses.
 
 If we're interested in creating a vector that contains 40 zeros, we can use rep(0, times = 40). Try it out.
-`
+```
 rep(0, times = 40)
-`
+```
 If instead we want our vector to contain 10 repetitions of the vector (0, 1, 2), we can do rep(c(0, 1, 2), times = 10). Go ahead.
-`
+```
 rep(c(0, 1, 2), times = 10)
-`
+```
 Finally, let's say that rather than repeating the vector (0, 1, 2) over and over again, we want our vector to contain 10 zeros, then 10 ones, then 10 twos. We can do this with the `each` argument. Try rep(c(0, 1, 2), each = 10).
-`
+```
 rep(c(0, 1, 2), each = 10)
-`
+```
