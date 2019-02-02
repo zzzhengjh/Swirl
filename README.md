@@ -1,4 +1,4 @@
-# Swirl
+# Swirl-R Programming
 ## 1. Basic Building Blocks 
 R can be used as an interactive calculator. Type 5 + 7 and press Enter.
 ```
